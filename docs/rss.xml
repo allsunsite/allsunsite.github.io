@@ -1,5 +1,117 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Gigi King</title><link>https://allsunsite.github.io</link><description>啥都不是真理！</description><copyright>Gigi King</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://allsunsite.github.io</link></image><lastBuildDate>Tue, 30 Sep 2025 05:51:23 +0000</lastBuildDate><managingEditor>Gigi King</managingEditor><ttl>60</ttl><webMaster>Gigi King</webMaster><item><title>分享一段话</title><link>https://allsunsite.github.io/post/fen-xiang-yi-duan-hua.html</link><description>`关于认知水平低这件事，真的很难做到「理解」，而且会显得非常的「精英主义」，但这就是现实，因为彼此之间压根就无法理解对方的认知逻辑。</description><guid isPermaLink="true">https://allsunsite.github.io/post/fen-xiang-yi-duan-hua.html</guid><pubDate>Tue, 30 Sep 2025 05:50:54 +0000</pubDate></item><item><title>山东游记</title><link>https://allsunsite.github.io/post/shan-dong-you-ji.html</link><description>出行回来，还是有些感触，有时间了再写，先整理照片。</description><guid isPermaLink="true">https://allsunsite.github.io/post/shan-dong-you-ji.html</guid><pubDate>Tue, 09 Sep 2025 08:53:58 +0000</pubDate></item><item><title>新入手了胶囊咖啡机 D40</title><link>https://allsunsite.github.io/post/xin-ru-shou-le-jiao-nang-ka-fei-ji-%20D40.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Gigi King</title><link>https://allsunsite.github.io</link><description>啥都不是真理！</description><copyright>Gigi King</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://allsunsite.github.io</link></image><lastBuildDate>Fri, 10 Oct 2025 02:26:55 +0000</lastBuildDate><managingEditor>Gigi King</managingEditor><ttl>60</ttl><webMaster>Gigi King</webMaster><item><title>收益法评估企业价值 —— 折现率测算全流程（2025版）</title><link>https://allsunsite.github.io/post/shou-yi-fa-ping-gu-qi-ye-jia-zhi-%20%E2%80%94%E2%80%94%20-zhe-xian-lv-ce-suan-quan-liu-cheng-%EF%BC%882025-ban-%EF%BC%89.html</link><description>```markdown
+# 收益法评估企业价值 —— 折现率测算全流程（2025版）
+
+&gt; 适用场景：企业自由现金流（FCFF）模型  
+&gt; 输出目标：加权平均资本成本（WACC）—— 最终折现率
+
+---
+
+## 1. 确定无风险利率 Rf
+| 项目 | 取值逻辑 | 2025年9月参考值 |
+|---|---|---|
+| 券种 | 中国国债到期收益率 | 10年期 |
+| 数据源 | 中央结算公司 | 2.70% |
+| 备注 | 与现金流期限匹配；永续模型用长期国债 |  |
+
+---
+
+## 2. 计算市场风险溢价 MRP
+```text
+MRP = 股票市场长期平均收益率 － 无风险利率
+```
+| 指标 | 数值 | 来源 |
+|---|---|---|
+| 沪深300全收益指数 10 年年化 | 9.0% | Wind |
+| 减：无风险利率 | 2.7% | 步骤1 |
+| **MRP 结果** | **6.3%** | 取整 6.2% 作为基准 |
+
+---
+
+## 3. 杠杆贝塔（βL）→ 无杠杆贝塔（βU）
+### 3.1 可比公司样本（示例：高端制造业）
+| 证券代码 | 公司名称 | βL（周收益，2年） | D/E | βU |
+|---|---|---|---|---|
+| 600031 | 三一重工 | 1.28 | 0.52 | 0.94 |
+| 000425 | 徐工机械 | 1.15 | 0.48 | 0.87 |
+| 002594 | 比亚迪 | 1.36 | 0.45 | 1.03 |
+| **平均** | — | **1.26** | **0.48** | **0.95** |
+
+### 3.2 公式
+```
+βU = βL ÷ [1 + (1 – T) × D/E ]
+```
+T = 25%（中国法定所得税）
+
+---
+
+## 4. 目标资本结构 &amp; 重新杠杆
+| 项目 | 选取方式 | 示例值 |
+|---|---|---|
+| 目标 D/E | 行业平均 &amp; 管理层融资计划 | 0.60 |
+| 目标 βL（再杠杆） | βU × [1 + (1 – T) × D/E ] | 0.95 × 1.45 = **1.38** |
+
+---
+
+## 5. 股权成本 Re（CAPM+扩展）
+```
+Re = Rf + βL × MRP + 规模溢价 + 公司特定风险
+```
+| 因子 | 数值 | 说明 |
+|---|---|---|
+| Rf | 2.7% | 步骤1 |
+| βL × MRP | 1.38 × 6.2% = 8.56% | 步骤4 |
+| 规模溢价 | 1.0% | 收入&lt;50亿，参考Grabowski-King研究 |
+| 特定风险 | 1.5% | 客户集中+海外政策风险 |
+| **Re** | **13.76%** |  |
+
+---
+
+## 6. 债务成本 Rd 与税率
+| 项目 | 数值 | 来源 |
+|---|---|---|
+| 公司长期借款利率 | 4.5% | 2025年实际 AAA 企业债+50bp |
+| 所得税率 T | 25% | 法定 |
+
+---
+
+## 7. 资本结构权重（目标）
+| 项目 | 计算 | 结果 |
+|---|---|---|
+| E/(D+E) | 1/(1+0.6) | 62.50% |
+| D/(D+E) | 0.6/(1+0.6) | 37.50% |
+
+---
+
+## 8. WACC 计算
+```
+WACC = (E/V) × Re + (D/V) × Rd × (1 – T)
+     = 62.5% × 13.76% + 37.5% × 4.5% × 75%
+     = 8.60% + 1.27%
+     = **9.87%**
+```
+&gt; 最终折现率 **9.9%**（四舍五入）
+
+---
+
+## 9. 敏感性校验
+| 情景 | 折现率 | 企业价值变动 |
+|---|---|---|
+| 基准 | 9.9% | 100% |
+| 上调+1% | 10.9% | –17% |
+| 下调–1% | 8.9% | +21% |
+
+---
+
+## 10. 关键检查清单
+- [ ] 现金流口径与折现率匹配（FCFF ↔ WACC）  
+- [ ] 贝塔回归窗口 ≥ 2 年，周频数据  
+- [ ] 目标资本结构来源透明（行业平均/管理层指引）  
+- [ ] 规模&amp;特定风险依据充分（参考IPO折扣、DLOM研究）  
+- [ ] 敏感性区间覆盖投资人决策阈值  
+
+---
+```。</description><guid isPermaLink="true">https://allsunsite.github.io/post/shou-yi-fa-ping-gu-qi-ye-jia-zhi-%20%E2%80%94%E2%80%94%20-zhe-xian-lv-ce-suan-quan-liu-cheng-%EF%BC%882025-ban-%EF%BC%89.html</guid><pubDate>Fri, 10 Oct 2025 02:26:25 +0000</pubDate></item><item><title>分享一段话</title><link>https://allsunsite.github.io/post/fen-xiang-yi-duan-hua.html</link><description>`关于认知水平低这件事，真的很难做到「理解」，而且会显得非常的「精英主义」，但这就是现实，因为彼此之间压根就无法理解对方的认知逻辑。</description><guid isPermaLink="true">https://allsunsite.github.io/post/fen-xiang-yi-duan-hua.html</guid><pubDate>Tue, 30 Sep 2025 05:50:54 +0000</pubDate></item><item><title>山东游记</title><link>https://allsunsite.github.io/post/shan-dong-you-ji.html</link><description>出行回来，还是有些感触，有时间了再写，先整理照片。</description><guid isPermaLink="true">https://allsunsite.github.io/post/shan-dong-you-ji.html</guid><pubDate>Tue, 09 Sep 2025 08:53:58 +0000</pubDate></item><item><title>新入手了胶囊咖啡机 D40</title><link>https://allsunsite.github.io/post/xin-ru-shou-le-jiao-nang-ka-fei-ji-%20D40.html</link><description>
 ## 1. 喝咖啡的开始
 孩子妈妈不大善于挖掘自己生活中的闪光点，总喜欢在抖音里欣赏小网红的 **“吃喝拉撒”**。</description><guid isPermaLink="true">https://allsunsite.github.io/post/xin-ru-shou-le-jiao-nang-ka-fei-ji-%20D40.html</guid><pubDate>Fri, 29 Aug 2025 06:36:30 +0000</pubDate></item><item><title>CoinMarketCap 市值排名前 100 的加密货币</title><link>https://allsunsite.github.io/post/CoinMarketCap%20-shi-zhi-pai-ming-qian-%20100%20-de-jia-mi-huo-bi.html</link><description>以下是截至 2025-07-31，CoinMarketCap 市值排名前 100 的加密货币（不含稳定币与锚定币）的 Markdown 表格。</description><guid isPermaLink="true">https://allsunsite.github.io/post/CoinMarketCap%20-shi-zhi-pai-ming-qian-%20100%20-de-jia-mi-huo-bi.html</guid><pubDate>Thu, 31 Jul 2025 01:53:29 +0000</pubDate></item><item><title>吮痈舐痔</title><link>https://allsunsite.github.io/post/shun-yong-shi-zhi.html</link><description>- 成文用法
 
