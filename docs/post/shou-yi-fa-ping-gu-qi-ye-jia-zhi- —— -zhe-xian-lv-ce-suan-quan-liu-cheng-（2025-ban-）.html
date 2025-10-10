@@ -19,6 +19,9 @@
 ---
 
 ## 1. 确定无风险利率 Rf
+```text
+```
+
 | 项目 | 取值逻辑 | 2025年9月参考值 |
 |---|---|---|
 | 券种 | 中国国债到期收益率 | 10年期 |
@@ -133,6 +136,9 @@ WACC = (E/V) × Re + (D/V) × Rd × (1 – T)
 ---
 
 ## 1. 确定无风险利率 Rf
+```text
+```
+
 | 项目 | 取值逻辑 | 2025年9月参考值 |
 |---|---|---|
 | 券种 | 中国国债到期收益率 | 10年期 |
@@ -315,17 +321,37 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-ms">---</span>
 
 <span class="pl-mh">## <span class="pl-en">1. 确定无风险利率 Rf</span></span>
-<span class="pl-ml">|</span> 项目 <span class="pl-ml">|</span> 取值逻辑 <span class="pl-ml">|</span> 2025年9月参考值 <span class="pl-ml">|</span>
-<span class="pl-ml">|</span>---<span class="pl-ml">|</span>---<span class="pl-ml">|</span>---<span class="pl-ml">|</span>
-<span class="pl-ml">|</span> 券种 <span class="pl-ml">|</span> 中国国债到期收益率 <span class="pl-ml">|</span> 10年期 <span class="pl-ml">|</span>
-<span class="pl-ml">|</span> 数据源 <span class="pl-ml">|</span> 中央结算公司 <span class="pl-ml">|</span> 2.70% <span class="pl-ml">|</span>
-<span class="pl-ml">|</span> 备注 <span class="pl-ml">|</span> 与现金流期限匹配；永续模型用长期国债 <span class="pl-ml">|</span>  <span class="pl-ml">|</span>
-
-<span class="pl-ms">---</span>
-
-<span class="pl-mh">## <span class="pl-en">2. 计算市场风险溢价 MRP</span></span>
-<span class="pl-s">```</span><span class="pl-en">text</span><span class="pl-c1"></span>
-<span class="pl-c1">MRP = 股票市场长期平均收益率 － 无风险利率</span></pre></div>
+<span class="pl-s">```</span><span class="pl-en">text</span><span class="pl-c1"></span></pre></div>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>项目</th>
+<th>取值逻辑</th>
+<th>2025年9月参考值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>券种</td>
+<td>中国国债到期收益率</td>
+<td>10年期</td>
+</tr>
+<tr>
+<td>数据源</td>
+<td>中央结算公司</td>
+<td>2.70%</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>与现金流期限匹配；永续模型用长期国债</td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>2. 计算市场风险溢价 MRP</h2>
+<pre lang="text" class="notranslate"><code class="notranslate">MRP = 股票市场长期平均收益率 － 无风险利率
+</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
