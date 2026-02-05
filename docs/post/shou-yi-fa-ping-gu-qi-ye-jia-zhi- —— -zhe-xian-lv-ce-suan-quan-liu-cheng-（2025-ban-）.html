@@ -251,7 +251,7 @@ WACC = (E/V) × Re + (D/V) × Rd × (1 – T)
 <meta property="og:url" content="https://allsunsite.github.io/post/shou-yi-fa-ping-gu-qi-ye-jia-zhi-%20%E2%80%94%E2%80%94%20-zhe-xian-lv-ce-suan-quan-liu-cheng-%EF%BC%882025-ban-%EF%BC%89.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>收益法评估企业价值 —— 折现率测算全流程（2025版）</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -317,13 +317,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre lang="markdown" class="notranslate"><code class="notranslate"># 收益法评估企业价值 —— 折现率测算全流程（2025版）
+<div class="markdown-body" id="postBody"><div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-mh"># <span class="pl-en">收益法评估企业价值 —— 折现率测算全流程（2025版）</span></span>
 
-&gt; 适用场景：企业自由现金流（FCFF）模型  
-&gt; 输出目标：加权平均资本成本（WACC）—— 最终折现率
-
-```text
-</code></pre>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>适用场景：企业自由现金流（FCFF）模型  </span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>输出目标：加权平均资本成本（WACC）—— 最终折现率</span>
+<span class="pl-ent"></span>
+<span class="pl-s">```</span><span class="pl-en">text</span><span class="pl-c1"></span></pre></div>
 <hr>
 <h2>1. 确定无风险利率 Rf</h2>
 <pre lang="text" class="notranslate"><code class="notranslate"></code></pre>
@@ -608,7 +607,7 @@ if(""!=""){
     var startSite=new Date("");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -653,6 +652,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
